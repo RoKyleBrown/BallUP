@@ -4,6 +4,7 @@
 .show {
     background-color: gray;
     overflow: hidden;
+    display: block;
     /* transform: translateY(30%); */
 }
 
@@ -11,6 +12,10 @@
     margin: 0px;
     padding-top: 30px;
 
+}
+
+.pre-show {
+    display: none;
 }
 
 .flex-vid {
@@ -513,4 +518,41 @@
     /* margin-top: 4.2%; */
     /* transform: translateY(100%); */
     font: 1.5vw "Berthold Regular"
+}
+
+.pre-set-show{
+    display: none;
+}
+
+.load-contain {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -53px;
+}
+
+.load-formation {
+    transform: scale(.1);
+    position: absolute;
+    overflow: hidden;
+}
+
+.ball-crop{
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    animation: load-balls 1s infinite;
+}
+
+@keyframes load-balls {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+.ball-back {
+    filter: drop-shadow(30px 10px 4px rgb(22, 22, 22));
+}
+
+.load-contain-b {
+    display: none;
 }
