@@ -542,7 +542,7 @@
     overflow: hidden;
     position: absolute;
     z-index: 2;
-    animation: load-balls 1s infinite;
+    animation: load-balls .5s infinite;
 }
 
 @keyframes load-balls {

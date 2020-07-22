@@ -34,14 +34,14 @@ class SetGameShow extends React.Component {
         this.props.getUser();
         let gameId = this.state.id;
 
-        if (document.readyState == 'complete') {
+        // if (document.readyState == 'complete') {
            
             setTimeout(() => {
                 $(".pre-show").addClass("show");
                 $(".load-contain").addClass("load-contain-b");
                 $(".show").removeClass("pre-show");
             }, 1000)
-        }
+        // }
     }
 
     addPlayer(e) {
