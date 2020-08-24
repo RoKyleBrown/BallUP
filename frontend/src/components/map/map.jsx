@@ -12,8 +12,6 @@ export class MapContainer extends React.Component {
     }
 
     geocode(location) {
-        // var location = '22 Main st Boston MA'
-        // this.props.getAddress(location)
         let res = Axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
                 params: {
                         address: location,

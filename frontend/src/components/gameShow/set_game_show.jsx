@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import GameShowPlayer from './game_show_player';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import MapContainer from '../map/map';
-import MapContain from '../map/geocoding'
 import './show.css';
 import { teamNames1, teamNames2 } from './team_names'
 import ShowMap from '../map/show_map'
@@ -33,15 +32,12 @@ class SetGameShow extends React.Component {
         this.props.getUsers();
         this.props.getUser();
         let gameId = this.state.id;
-
-        // if (document.readyState == 'complete') {
            
             setTimeout(() => {
                 $(".pre-show").addClass("show");
                 $(".load-contain").addClass("load-contain-b");
                 $(".show").removeClass("pre-show");
             }, 1000)
-        // }
     }
 
     addPlayer(e) {
@@ -87,10 +83,8 @@ class SetGameShow extends React.Component {
 
     endGame(e) {
         e.preventDefault();
-        // if (this.props.player.id == this.state.game.players[0]._id) {
             this.props.removeGame(this.state.game._id)
                 .then(() => this.props.history.push('/'));
-        //  }
         
         
     }
@@ -196,21 +190,15 @@ class SetGameShow extends React.Component {
                                 </div>
                             </div>
                             <div className="buttons2">                           
-                                    <button 
-                                    // className="add-player player-button"
-                                    // onClick={this.addPlayer}
+                                    <button
                                     ><video id="first-rib" playsInline autoPlay muted>
                                         <source id="vid-src" src={scoreboard} type="video/mp4" />
                                     </video></button>
                                     <button 
-                                    // className="remove-player player-button"
-                                    // onClick={this.removePlayer}
                                     ><video id="second-rib" playsInline autoPlay muted>
                                         <source id="vid-src" src={scoreboard} type="video/mp4" />
                                     </video></button>
                                     <button 
-                                    // className="owner-button start-game"
-                                    // onClick={this.startGame}
                                     ><video id="third-rib" playsInline autoPlay muted>
                                         <source id="vid-src" src={scoreboard} type="video/mp4" />
                                     </video> </button>

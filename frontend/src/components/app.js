@@ -10,7 +10,6 @@ import GameShowContainer from './gameShow/game_show_container';
 import SetGameShowContainer from './gameShow/set_game_show_container'
 import SplashPage from './splash/splash';
 import CourtsContainer from './index/courts_container';
-import GeocodeContainer from './map/geocoding_container'
 import { IndexMap } from './map/index_map';
 
 
@@ -23,7 +22,6 @@ const App = () => {
             <Switch>
                 <ProtectedRoute path="/games/:gameId" component={GameShowContainer}/>
                 <ProtectedRoute path="/setgames/:gameId" component={SetGameShowContainer}/>
-                <Route path="/map/geocode" component={GeocodeContainer} />
                 {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
                 <ProtectedRoute exact path="/games" component={CourtsContainer} />
