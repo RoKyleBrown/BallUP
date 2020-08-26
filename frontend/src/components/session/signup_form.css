@@ -1,9 +1,9 @@
 .signup-form-container {
-    height: 300px;
+    height: 330px;
 }
 
 .su-modal-background {
-    height: 300px;
+    height: 330px;
     width: 250px;
     position: fixed;
     padding-top: 78px;
@@ -64,8 +64,8 @@ select:focus {
 }
 
 .su-btn {
-    background-color: black;
-    color: white;
+    background-color: gray;
+    color: black;
     border-radius: 4px;
     border: none;
 }

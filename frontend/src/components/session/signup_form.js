@@ -18,6 +18,7 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
         // this.clearedErrors = false;
     }
 
@@ -26,13 +27,22 @@ class SignupForm extends React.Component {
             this.props.history.push('/games');
         }
 
-        // this.setState({ errors: nextProps.errors })
     }
 
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+    }
+
+    demoUser() {
+        let user = {
+            email: 'guest@guest.com',
+            password: '123asd'
+        };
+        this.setState({ email: user.email });
+        this.setState({ password: user.password });
+        this.props.login(user);
     }
 
     handleSubmit(e) {
@@ -51,18 +61,6 @@ class SignupForm extends React.Component {
         .then(() => this.props.login({email: user.email, 
             password: user.password }))
     }
-
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {Object.keys(this.state.errors).map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {/* {this.state.errors[error]} */}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
     
 
     render() {
@@ -77,6 +75,7 @@ class SignupForm extends React.Component {
             )
         return (
             <div className="signup-form-container">
+                <br />
                 <form onSubmit={this.handleSubmit}>
                     <div className="signup-form">
                         <br />
@@ -138,6 +137,9 @@ class SignupForm extends React.Component {
                         <br />
                         {/* <input type="submit" value="Submit" /> */}
                         <button className="su-btn">Submit</button>
+                        <br />
+                        <button className="demo" onClick={this.demoUser}>
+                            Demo Login</button>
                         {/* {this.renderErrors()} */}
                     </div>
                 </form>
