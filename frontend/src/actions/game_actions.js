@@ -18,7 +18,7 @@ export const recieveGames = games => ({
 
 export const deleteGame = (gameId) => ({
   type: REMOVE_GAME,
-  gameId 
+  gameId
 
 })
 
