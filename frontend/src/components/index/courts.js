@@ -215,14 +215,6 @@ class Courts extends Component {
                 <div id="divider">
                     <p id="copyright">BallUp © 2020</p>
                 </div>
-                {/* <div id="color">
-                        <div id="color-left">
-                            <img src="left-court.png"/>
-                        </div>
-                        <div id="color-right">
-                            <img src="right-court.png" />
-                        </div>
-                </div> */}
             </div>
              
         

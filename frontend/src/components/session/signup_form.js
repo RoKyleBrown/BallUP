@@ -14,12 +14,10 @@ class SignupForm extends React.Component {
             first: '',
             second: '',
             third: ''
-            // errors: {}
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoUser = this.demoUser.bind(this);
-        // this.clearedErrors = false;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -135,12 +133,10 @@ class SignupForm extends React.Component {
                             placeholder="Confirm Password"
                         />
                         <br />
-                        {/* <input type="submit" value="Submit" /> */}
                         <button className="su-btn">Submit</button>
                         <br />
                         <button className="demo" onClick={this.demoUser}>
                             Demo Login</button>
-                        {/* {this.renderErrors()} */}
                     </div>
                 </form>
             </div>

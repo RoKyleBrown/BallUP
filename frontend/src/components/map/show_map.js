@@ -35,7 +35,7 @@ class ShowMap extends Component {
 
         address += ' San Francisco, CA';
 
-        let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyA9w4yZlROGaoP6q-a338pBQU2haj_3v6s`;
+        let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAmen9kYggzGMA5XU8lAFWPi5UypUUneEs`;
 
 
         fetch(url)
@@ -81,5 +81,5 @@ class ShowMap extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: ('AIzaSyA9w4yZlROGaoP6q-a338pBQU2haj_3v6s')
+    apiKey: ('AIzaSyAmen9kYggzGMA5XU8lAFWPi5UypUUneEs')
 })(ShowMap)

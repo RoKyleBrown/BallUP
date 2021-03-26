@@ -15,7 +15,7 @@ export class MapContainer extends React.Component {
         let res = Axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
                 params: {
                         address: location,
-                        key: 'AIzaSyA9w4yZlROGaoP6q-a338pBQU2haj_3v6s'
+                key: 'AIzaSyAmen9kYggzGMA5XU8lAFWPi5UypUUneEs'
                     }
                 }
         )
@@ -49,5 +49,5 @@ export class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyA9w4yZlROGaoP6q-a338pBQU2haj_3v6s'
+    apiKey: 'AIzaSyAmen9kYggzGMA5XU8lAFWPi5UypUUneEs'
   })(MapContainer);

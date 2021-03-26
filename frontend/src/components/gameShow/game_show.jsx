@@ -20,8 +20,6 @@ class GameShow extends React.Component {
         players: {}, count: {}, fileUrl: '' };
         this.state.count[this.state.id] = 0;
         this.state.players[this.state.id] = [[], []];
-        // this.teamKey = `${this.state.id}teamNames`;
-        // this.state.game.teamNames[this.teamKey] = ['team 1', 'team2']
         this.firstTeam = '';
         this.secondTeam = '';
     }
@@ -38,22 +36,6 @@ class GameShow extends React.Component {
          this.state.players[gameId];
         let teamNames = localStorage.getItem(`${this.teamKey}`) || 
         this.state.teamNames;
-
-        // if (typeof teamNames === "string") {
-        //     this.state.teamNames[this.teamKey] = JSON.parse(teamNames);
-        //     this.setState({ teamNames: this.state.teamNames })
-        // } else {
-        //     this.state.players[this.teamKey] = teamNames;
-        //     this.setState({ players: this.state.teamNames })
-        // }
-
-        // if (typeof teams === "string"){ 
-        //     this.state.players[this.state.id] = JSON.parse(teams);
-        //     this.setState({ players: this.state.players})
-        // } else {
-        //     this.state.players[this.state.id] = teams;
-        //     this.setState({ players: this.state.players})
-        // }
     }
 
     addPlayer(e) {
@@ -95,12 +77,6 @@ class GameShow extends React.Component {
                 this.props.updateGame(this.state.game);
             }
 
-            // $(".grid").addClass("grid-b");
-            // $(".showbox-right").addClass("showbox-right-b");
-            // $(".showbox-right").removeClass("showbox-right");
-            // $(".team1").addClass("team1-b");
-            // $(".vs").addClass("vs-b");
-            // $(".team2").addClass("team2-b");
 
             let team1 = {
                 "Point Guard": 0, "Shooting Guard": 0, "Small Forward": 0, 
@@ -166,7 +142,7 @@ class GameShow extends React.Component {
                     }
                 }
             })
-            // let teams = [team1, team2];
+          
             
             this.state.game.teams = [team1, team2];
             this.setState({ game: this.state.game })

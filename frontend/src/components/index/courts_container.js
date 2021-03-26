@@ -7,7 +7,6 @@ import { getAddress } from '../../actions/map_actions'
 const mapStateToProps = (state) => {
     return{
         games: Object.values(state.games.all),
-        // location: '22 Main st Boston MA'
     }
 }
 
