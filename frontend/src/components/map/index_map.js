@@ -48,7 +48,7 @@ export class IndexMap extends Component {
                 return response.json();
             })
             .then((data) => {
-debugger;
+                
                 this.state.coords.push(data.results[0].geometry.location)
                 this.setState({ coords: this.state.coords })
                 game["coords"] = data.results[0].geometry.location;

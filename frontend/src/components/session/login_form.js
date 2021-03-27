@@ -102,7 +102,7 @@ class LoginForm extends React.Component {
         return (
             <div id="login">
                 <form className="login-form" onSubmit={this.handleSubmit}>
-                        {/* <br /> */}
+                        
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
